@@ -1,0 +1,21 @@
+# Redirect default Netlify subdomain to primary domain
+https://bravery.netlify.com/* https://bravery.co/:splat 301!
+
+# Redirect domain aliases to primary domain
+https://braverymedia.co/* https://bravery.co/:splat 301!
+https://www.braverymedia.co/* https://bravery.co/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://braverymedia.co/* https://bravery.co/:splat 301!
+http://www.braverymedia.co/* https://bravery.co/:splat 301!
+
+# Redirect deck URLs
+/contented18 https://speakerdeck.com/joelgoodman/content-first-design-what-does-it-really-mean-and-how-can-it-enhance-the-audience-experience 301
+/wpcampus19 https://bravery.co/assets/decks/redesigning-university-websites-for-results.pdf 301
+# CSS Proposal
+/css-redesign https://indd.adobe.com/view/e8d7969a-be71-4f3c-af4d-b4ccf5b39bf8 301
+/proposals/naspa-advising https://indd.adobe.com/view/a3d4786c-ab39-42be-842e-1fecdb7224ea
+
+# Not working...
+/contact https://bravery.co 301!
+/about https://bravery.co 301!
