@@ -545,7 +545,8 @@ a.button {
       position: absolute;
       bottom: 0;
       right: 0;
-      height: 25vh; }
+      height: 25vh;
+      filter: blur(15px); }
       @media (min-width: 960px) {
         .hero-background .mountains {
           height: auto;

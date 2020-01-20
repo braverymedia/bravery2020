@@ -214,6 +214,7 @@ a.button {
       bottom: 0;
       right: 0;
       height: 25vh;
+      filter: blur(15px);
       @media (min-width: 960px) {
         height: auto;
         width: 100%;
