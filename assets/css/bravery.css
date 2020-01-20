@@ -451,7 +451,9 @@ figure {
         font-size: 0.75em; } }
   .toolbar .nav-link {
     justify-content: center;
-    font-weight: 500; }
+    font-weight: 500;
+    transition: opacity 300ms ease;
+    opacity: 1; }
     .toolbar .nav-link:first-child {
       justify-self: start; }
     .toolbar .nav-link:last-child {
@@ -460,6 +462,8 @@ figure {
       justify-content: center; }
       .toolbar .nav-link.logo > svg {
         height: 32px; }
+    .toolbar .nav-link:hover {
+      opacity: .6; }
   .toolbar a {
     color: var(--color-white);
     text-decoration: none;
@@ -474,7 +478,10 @@ button,
   text-align: center;
   width: 100%;
   margin: calc(var(--grid-unit) * 5) auto;
-  border: 0px; }
+  border: 0px;
+  transition: opacity 300ms ease;
+  opacity: 1;
+  cursor: pointer; }
   button.primary, button.bright,
   .button.primary,
   .button.bright {
@@ -492,6 +499,9 @@ button,
   .button.rich {
     background-color: var(--color-rich);
     color: var(--color-white); }
+  button:hover,
+  .button:hover {
+    opacity: .6; }
   @media (min-width: 960px) {
     button,
     .button {

@@ -112,6 +112,8 @@ figure {
   .nav-link {
     justify-content: center;
     font-weight: $weight-medium;
+    transition: opacity 300ms ease;
+    opacity: 1;
     &:first-child {
       justify-self: start;
     }
@@ -123,6 +125,9 @@ figure {
       > svg {
         height: 32px;
       }
+    }
+    &:hover {
+      opacity: .6;
     }
   }
   a {
@@ -142,6 +147,9 @@ button,
   width: 100%;
   margin: calc(var(--grid-unit) * 5) auto;
   border: 0px;
+  transition: opacity 300ms ease;
+  opacity: 1;
+  cursor: pointer;
   &.primary,
   &.bright {
     background-color: var(--color-bright);
@@ -158,6 +166,9 @@ button,
   &.rich {
     background-color: var(--color-rich);
     color: var(--color-white);
+  }
+  &:hover {
+    opacity: .6;
   }
   @media (min-width: 960px) {
     display: inline-block;
@@ -220,13 +231,14 @@ a.button {
         width: 100%;
       }
     }
-    >img {
+    > img {
       height: 100%;
       position: relative;
       z-index: -1;
       @media (min-width: 960px) {
         width: 100%;
         object-fit: cover;
+
       }
     }
   }
