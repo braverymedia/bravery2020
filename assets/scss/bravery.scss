@@ -129,6 +129,9 @@ figure {
     &:hover {
       opacity: .6;
     }
+    &:active {
+      opacity: .9;
+    }
   }
   a {
     color: var(--color-white);
@@ -169,6 +172,9 @@ button,
   }
   &:hover {
     opacity: .6;
+  }
+  &:active {
+    opacity: .9;
   }
   @media (min-width: 960px) {
     display: inline-block;
@@ -215,9 +221,9 @@ a.button {
       right: 0;
       bottom: 0;
       z-index: 1;
-      background: radial-gradient(circle, transparent 50%, black 150%);
+      background: radial-gradient(circle, transparent 50%, black 150%), linear-gradient(to bottom, black 0%, transparent 10%);
       @media (min-width: 960px) {
-        background: radial-gradient(circle, transparent 30%, black 100%);
+        background: radial-gradient(circle, transparent 30%, black 100%), linear-gradient(to bottom, black 0%, transparent 15%);;
       }
     }
     .mountains {
