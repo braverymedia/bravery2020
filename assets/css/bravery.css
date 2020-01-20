@@ -607,6 +607,15 @@ main {
         grid-column: 1 / 7;
         position: sticky;
         top: 10vh; }
+        .layout-contact main header p {
+          font-size: .75em; }
+        .layout-contact main header a {
+          color: var(--color-white);
+          text-decoration: none;
+          margin-left: 1em;
+          font-weight: 500; }
+          .layout-contact main header a:hover {
+            border-bottom: 2px solid; }
       .layout-contact main .rfi {
         grid-column: 7 / end; } }
 
@@ -619,7 +628,8 @@ main {
       margin: 0;
       font-size: 2em;
       padding: 0;
-      text-align: right; }
+      text-align: right;
+      cursor: pointer; }
 
 @media (min-width: 960px) {
   .layout-services h1 {

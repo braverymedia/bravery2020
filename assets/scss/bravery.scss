@@ -286,6 +286,18 @@ main {
         grid-column: 1 / 7;
         position: sticky;
         top: 10vh;
+        p {
+          font-size: .75em;
+        }
+        a {
+          color: var(--color-white);
+          text-decoration: none;
+          margin-left: 1em;
+          font-weight: $weight-medium;
+          &:hover {
+            border-bottom: 2px solid;
+          }
+        }
       }
       .rfi {
         grid-column: 7 / end;
@@ -303,6 +315,7 @@ main {
       font-size: 2em;
       padding: 0;
       text-align: right;
+      cursor: pointer;
     }
   }
 }
