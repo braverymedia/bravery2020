@@ -223,7 +223,7 @@ a.button {
       z-index: 1;
       background: radial-gradient(circle, transparent 50%, black 150%), linear-gradient(to bottom, black 0%, transparent 10%);
       @media (min-width: 960px) {
-        background: radial-gradient(circle, transparent 30%, black 100%), linear-gradient(to bottom, black 0%, transparent 15%);;
+        background: radial-gradient(circle, transparent 30%, rgba(#000, .95) 80%), linear-gradient(to bottom, black 0%, transparent 15%);;
       }
     }
     .mountains {
