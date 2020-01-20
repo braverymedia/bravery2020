@@ -1,0 +1,14 @@
+@keyframes spaceRotate {
+  0% {
+    transform: rotate(0deg) scale(1.1) skewY(6deg);
+  }
+  30% {
+    transform: rotate(-90deg) scale(1.3) skewY(20deg);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1.4) skewY(-20deg);
+  }
+  to {
+    transform: rotate(-360deg) scale(1.0) skewY(6deg);
+  }
+}

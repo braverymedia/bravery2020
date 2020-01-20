@@ -14,7 +14,7 @@ $weight-normal: 400;
 $weight-medium: 500;
 $weight-bold: 700;
 
-@import 'webfont', 'normalize';
+@import 'webfont', 'normalize', 'animations';
 * {
   box-sizing: border-box;
 }
@@ -241,10 +241,13 @@ a.button {
       height: 100%;
       position: relative;
       z-index: -1;
+      animation: spaceRotate 600s infinite;
+      transform-origin: center;
+      mix-blend-mode: overlay;
+      opacity: .8;
       @media (min-width: 960px) {
         width: 100%;
         object-fit: cover;
-
       }
     }
   }
