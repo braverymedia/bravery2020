@@ -614,7 +614,9 @@ a.button {
           height: auto;
           width: 100%; } }
     .hero-background > img {
+      width: auto;
       height: 100%;
+      left: -55%;
       position: relative;
       z-index: -1;
       -webkit-animation: spaceRotate 600s infinite;
@@ -627,7 +629,8 @@ a.button {
         .hero-background > img {
           width: 100%;
           -o-object-fit: cover;
-             object-fit: cover; } }
+             object-fit: cover;
+          left: auto; } }
   .hero h1 {
     position: relative;
     z-index: 0;
