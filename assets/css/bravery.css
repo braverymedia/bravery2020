@@ -894,12 +894,6 @@ main {
           margin-top: calc(var(--grid-unit) * 7); } }
   .panel.packages ul {
     margin: calc( var(--grid-unit) * 4) 0; }
-  .panel.legal table {
-    font-size: .75em; }
-    .panel.legal table td {
-      vertical-align: top; }
-    .panel.legal table thead {
-      border-bottom: 1px solid var(--color-black); }
   .panel.legal #policy {
     font-size: .75em; }
     @media (min-width: 960px) {
@@ -1025,7 +1019,12 @@ blockquote {
   .site-footer p {
     line-height: 1.5; }
   .site-footer a {
-    color: var(--color-white); }
+    color: var(--color-white);
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    opacity: 1; }
+    .site-footer a:hover {
+      opacity: .6; }
   .site-footer nav {
     margin-top: calc(var(--grid-unit) * 8); }
     .site-footer nav a {
@@ -1079,3 +1078,32 @@ form button {
   display: block;
   margin: 0 auto;
   width: 100%; }
+
+table {
+  font-size: .75em; }
+  table td {
+    vertical-align: top; }
+    table td ul {
+      margin-top: 0; }
+  table thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit; }
+  table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit; }
+  table th {
+    font-weight: 700; }
+  table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1; }
+    table th:first-child, table td:first-child {
+      padding-left: 0; }
