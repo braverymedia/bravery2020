@@ -423,7 +423,7 @@ main {
       .people--grid {
         grid: auto / repeat(6, 1fr);
         .headshot-brendan {
-          grid-column: 2 / 4;
+          grid-column: 3 / 4;
         }
         .headshot-joel {
           grid-column: 4 / 6;
