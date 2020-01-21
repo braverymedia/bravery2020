@@ -295,6 +295,11 @@ a.button {
       }
     }
   }
+  .layout-legal & {
+    h1 {
+      grid-column: 1 / end;
+    }
+  }
 }
 main {
   margin-top: 100vh;
@@ -575,7 +580,23 @@ main {
       margin: calc( var(--grid-unit) * 4) 0;
     }
   }
-
+  &.legal {
+    table {
+      font-size: .75em;
+      td {
+        vertical-align: top;
+      }
+      thead {
+        border-bottom: 1px solid var(--color-black);
+      }
+    }
+    #policy {
+      font-size: .75em;
+      @media (min-width: 960px) {
+        grid-column: 3 / 11
+      }
+    }
+  }
   &.rfi {
     h2 {
       font-size: 1.556em;

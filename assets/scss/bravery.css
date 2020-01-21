@@ -645,7 +645,10 @@ a.button {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto; }
-  .layout-services .hero {
+    .layout-legal .hero h1 {
+      grid-column: 1 / end; }
+  .layout-services .hero,
+  .layout-legal .hero {
     position: static;
     display: -webkit-box;
     display: flex;
@@ -657,24 +660,30 @@ a.button {
     height: auto;
     min-height: 100vh;
     padding-top: 45vh; }
-    .layout-services .hero h2 {
+    .layout-services .hero h2,
+    .layout-legal .hero h2 {
       font-size: 1.556em;
       margin-top: calc(var(--grid-unit) * 8); }
     @media (min-width: 960px) {
-      .layout-services .hero {
+      .layout-services .hero,
+      .layout-legal .hero {
         display: block;
         padding-top: 25vh; }
-        .layout-services .hero h1 {
+        .layout-services .hero h1,
+        .layout-legal .hero h1 {
           margin-top: 0;
           position: -webkit-sticky;
           position: sticky;
           top: 25vh; }
-        .layout-services .hero h2 {
+        .layout-services .hero h2,
+        .layout-legal .hero h2 {
           font-size: 1.417em; }
-        .layout-services .hero p {
+        .layout-services .hero p,
+        .layout-legal .hero p {
           font-size: .75em;
           line-height: 1.45; }
-          .layout-services .hero p.is-large {
+          .layout-services .hero p.is-large,
+          .layout-legal .hero p.is-large {
             font-size: 1rem; } }
 
 main {

@@ -676,6 +676,8 @@ a.button {
           line-height: 1.45; }
           .layout-services .hero p.is-large {
             font-size: 1rem; } }
+  .layout-legal .hero h1 {
+    grid-column: 1 / end; }
 
 main {
   margin-top: 100vh; }
@@ -862,7 +864,7 @@ main {
         .panel.packages .package#allin:after {
           content: "";
           background-image: url("../img/bullseye.svg");
-          background-size: auto 100%;
+          background-size: cover;
           background-position: center;
           height: 100vh;
           grid-column: 2;
@@ -892,6 +894,17 @@ main {
           margin-top: calc(var(--grid-unit) * 7); } }
   .panel.packages ul {
     margin: calc( var(--grid-unit) * 4) 0; }
+  .panel.legal table {
+    font-size: .75em; }
+    .panel.legal table td {
+      vertical-align: top; }
+    .panel.legal table thead {
+      border-bottom: 1px solid var(--color-black); }
+  .panel.legal #policy {
+    font-size: .75em; }
+    @media (min-width: 960px) {
+      .panel.legal #policy {
+        grid-column: 3 / 11; } }
   .panel.rfi h2 {
     font-size: 1.556em; }
   @media (min-width: 960px) {
