@@ -63,7 +63,7 @@
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6L324L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <nav class="toolbar">
-    <button class="trigger-navback button dark" onclick="window.history.back()">&times;</button>
+    <button class="trigger-navback button dark" onclick="window.location.replace(document.referrer)">&times;</button>
   </nav>
   <main class="panel--grid">
     <header>
@@ -76,7 +76,7 @@
       <form name="contact" method="POST" data-netlify="true" id="bravery-contact">
         <p>
           <label>
-            <span>Name</span>
+            <span>Name*</span>
             <input type="text" name="name" class="name" required />
           </label>
         </p>
@@ -88,25 +88,25 @@
         </p>
         <p>
           <label>
-            <span>Email</span>
+            <span>Email*</span>
             <input type="email" name="email" class="email" required />
           </label>
         </p>
         <p>
           <label>
-            <span>Institution</span>
+            <span>Institution*</span>
             <input type="text" name="institution" class="institution" required />
           </label>
         </p>
         <p>
           <label>
             <span>Insitution Website URL</span>
-            <input type="url" name="url" class="institution-url" />
+            <input type="url" name="url" class="institution-url" value="https://" />
           </label>
         </p>
         <p>
           <label>
-            <span>Tell us about your project.</span>
+            <span>Tell us about your project.*</span>
             <textarea name="message" class="email" rows="8" cols="33" required></textarea>
           </label>
         </p>
