@@ -532,7 +532,7 @@ main {
           &:after {
             content: "";
             background-image: url('../img/bullseye.svg');
-            background-size: auto 100%;
+            background-size: cover;
             background-position: center;
             height: 100vh;
             grid-column: 2;

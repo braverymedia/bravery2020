@@ -362,20 +362,38 @@ template {
   display: none; }
 
 @-webkit-keyframes spaceRotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
+  0% {
+    -webkit-transform: rotate(0deg) scale(1.1) skewY(6deg);
+            transform: rotate(0deg) scale(1.1) skewY(6deg); }
+  25% {
+    -webkit-transform: rotate(-90deg) scale(1.3) skewY(-20deg);
+            transform: rotate(-90deg) scale(1.3) skewY(-20deg); }
+  50% {
+    -webkit-transform: rotate(-180deg) scale(1.4) skewY(-6deg);
+            transform: rotate(-180deg) scale(1.4) skewY(-6deg); }
+  75% {
+    -webkit-transform: rotate(-180deg) scale(1.4) skewY(25deg);
+            transform: rotate(-180deg) scale(1.4) skewY(25deg); }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(1) skewY(6deg);
+            transform: rotate(-360deg) scale(1) skewY(6deg); } }
 
 @keyframes spaceRotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg); } }
+  0% {
+    -webkit-transform: rotate(0deg) scale(1.1) skewY(6deg);
+            transform: rotate(0deg) scale(1.1) skewY(6deg); }
+  25% {
+    -webkit-transform: rotate(-90deg) scale(1.3) skewY(-20deg);
+            transform: rotate(-90deg) scale(1.3) skewY(-20deg); }
+  50% {
+    -webkit-transform: rotate(-180deg) scale(1.4) skewY(-6deg);
+            transform: rotate(-180deg) scale(1.4) skewY(-6deg); }
+  75% {
+    -webkit-transform: rotate(-180deg) scale(1.4) skewY(25deg);
+            transform: rotate(-180deg) scale(1.4) skewY(25deg); }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(1) skewY(6deg);
+            transform: rotate(-360deg) scale(1) skewY(6deg); } }
 
 * {
   box-sizing: border-box; }
@@ -588,8 +606,8 @@ a.button {
       background: radial-gradient(circle, transparent 50%, black 150%), linear-gradient(to bottom, black 0%, transparent 10%); }
       @media (min-width: 960px) {
         .hero-background:before {
-          background: radial-gradient(circle, transparent 30%, black 100%), -webkit-gradient(linear, left top, left bottom, from(black), color-stop(15%, transparent));
-          background: radial-gradient(circle, transparent 30%, black 100%), linear-gradient(to bottom, black 0%, transparent 15%); } }
+          background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.95) 80%), -webkit-gradient(linear, left top, left bottom, from(black), color-stop(15%, transparent));
+          background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.95) 80%), linear-gradient(to bottom, black 0%, transparent 15%); } }
     .hero-background .mountains {
       position: absolute;
       bottom: 0;
@@ -602,14 +620,23 @@ a.button {
           height: auto;
           width: 100%; } }
     .hero-background > img {
+      width: auto;
       height: 100%;
+      left: -55%;
       position: relative;
       z-index: -1;
-      -webkit-animation: spaceRotate 5s infinite ease;
-              animation: spaceRotate 5s infinite ease; }
+      -webkit-animation: spaceRotate 650s infinite;
+              animation: spaceRotate 650s infinite;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      mix-blend-mode: overlay;
+      opacity: .8; }
       @media (min-width: 960px) {
         .hero-background > img {
-          width: 100%; } }
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          left: auto; } }
   .hero h1 {
     position: relative;
     z-index: 0;
@@ -835,7 +862,7 @@ main {
         .panel.packages .package#allin:after {
           content: "";
           background-image: url("../img/bullseye.svg");
-          background-size: auto 100%;
+          background-size: cover;
           background-position: center;
           height: 100vh;
           grid-column: 2;
