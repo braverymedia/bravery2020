@@ -132,6 +132,9 @@ figure {
     &:active {
       opacity: .9;
     }
+    &.current-page a {
+      border-bottom: 1px solid;
+    }
   }
   a {
     color: var(--color-white);
