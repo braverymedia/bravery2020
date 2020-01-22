@@ -114,6 +114,9 @@ figure {
     font-weight: $weight-medium;
     transition: opacity 300ms ease;
     opacity: 1;
+    &.current-page {
+      font-style: italic;
+    }
     &:first-child {
       justify-self: start;
     }
@@ -131,9 +134,6 @@ figure {
     }
     &:active {
       opacity: .9;
-    }
-    &.current-page a {
-      border-bottom: 1px solid;
     }
   }
   a {
