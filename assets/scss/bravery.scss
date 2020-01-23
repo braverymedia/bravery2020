@@ -246,7 +246,7 @@ a.button {
       left: -55%;
       position: relative;
       z-index: -1;
-      animation: spaceRotate 650s infinite;
+      animation: spaceRotate 350s infinite linear;
       transform-origin: center;
       mix-blend-mode: overlay;
       opacity: .8;
