@@ -20,6 +20,8 @@ if (contactForm) {
     processForm(contactForm);
   })
 }
+
+// Nav back from contact form
 const closeContact = document.querySelector('.trigger-navback');
 let referrer = document.referrer;
 if (closeContact) {
