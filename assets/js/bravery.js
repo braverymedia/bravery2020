@@ -20,3 +20,14 @@ if (contactForm) {
     processForm(contactForm);
   })
 }
+const closeContact = document.querySelector('.trigger-navback');
+let referrer = document.referrer;
+if (closeContact) {
+  closeContact.addEventListener('click', e => {
+    if ( referrer.match(/^https?:\/\/([^\/]+\.)?bravery\.co(\/|$)/i) ) {
+      window.location.replace(referrer)
+    } else {
+      window.location.replace('https://bravery.co')
+    }
+  })
+}
