@@ -412,11 +412,11 @@ main {
   &.company {
     .people--grid {
       display: grid;
-      grid: auto / 1fr 1fr;
+      grid: auto / 1fr 1fr 1fr;
       grid-column-gap: calc(var(--grid-unit) * 2);
       width: 100vw;
-      margin-left: calc(var(--grid-unit * -1));
-      margin-right: calc(var(--grid-unit * -1));
+      margin-left: calc(var(--grid-unit) * -1);
+      margin-right: calc(var(--grid-unit) * -1);
       margin-top: calc(var(--grid-unit) * 9);
     }
     .headshot-joel {
@@ -424,12 +424,8 @@ main {
     }
     @media (min-width: 700px) {
       .people--grid {
-        grid: auto / repeat(6, 1fr);
-        .headshot-brendan {
-          grid-column: 3 / 4;
-        }
+        grid-column-gap: calc(var(--grid-unit) * 6);
         .headshot-joel {
-          grid-column: 4 / 6;
           transform: translatey(-15%);
         }
       }
@@ -440,21 +436,9 @@ main {
         grid-row: 1;
       }
       .people--grid {
-        width: auto;
         grid-row: 2;
-        max-width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-        grid: auto / repeat(6, 1fr);
-        grid-column-gap: 2.25vw;
+        grid-column-gap: 10vw;
         margin-top: calc(var(--grid-unit) * 15);
-        .headshot-brendan {
-          grid-column: 2 / 4;
-        }
-        .headshot-joel {
-          grid-column: 4 / 6;
-          transform: translatey(-15%);
-        }
       }
     }
   }
