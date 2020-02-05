@@ -557,8 +557,7 @@ main {
         }
       }
       .addons {
-        padding-top: calc(var(--grid-unit) * 20);
-        padding-bottom: calc(var(--grid-unit) * 20);
+        padding: calc(var(--grid-unit) * 20) calc(var(--grid-unit) * 10);
         header {
           grid-column: 1 / 10;
           font-size: 1rem;
@@ -572,6 +571,9 @@ main {
         }
         h3 {
           margin-top: calc(var(--grid-unit) * 7);
+        }
+        @media (min-width: 1280px) {
+          padding: calc(var(--grid-unit) * 20) 0;
         }
       }
     }
