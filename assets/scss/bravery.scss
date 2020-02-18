@@ -313,6 +313,12 @@ main {
   .layout-contact & {
     min-height: 100vh;
     padding: 10vh calc(var(--grid-unit) * 2);
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+      margin-left: 1em;
+      font-weight: $weight-medium;
+    }
     @media (min-width: 960px) {
       header {
         grid-column: 1 / 7;
@@ -322,10 +328,6 @@ main {
           font-size: .75em;
         }
         a {
-          color: var(--color-white);
-          text-decoration: none;
-          margin-left: 1em;
-          font-weight: $weight-medium;
           &:hover {
             border-bottom: 2px solid;
           }
