@@ -9,7 +9,7 @@ const processForm = form => {
     form.innerHTML = `<div class="confirmation"><p>Thanks for getting in touch. We'll reply to you shortly!</p></div>`;
   })
   .catch(error => {
-    form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
+    form.innerHTML = `<div class="form--error">Something went wrong, please email us! Error: ${error}</div>`;
   })
 }
 
