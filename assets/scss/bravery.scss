@@ -79,6 +79,14 @@ h1 {
       font-size: 3.917rem;
     }
   }
+
+  @media (min-width: 960px) and (max-height: 750px) {
+    font-size: 2.7em;
+
+    &.super {
+      font-size: 3.317rem;
+    }
+  }
 }
 
 h2 {
@@ -259,67 +267,8 @@ a.button {
   justify-content: flex-end;
   padding: 0 calc(var(--grid-unit) * 2) 20vh;
 
-  @media (min-width: 960px) {
+  @media (min-width: 960px) and (min-height: 725px) {
     padding: 0 calc(var(--grid-unit) * 4) 20vh;
-  }
-
-  &-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      background: radial-gradient(circle, transparent 50%, black 150%), linear-gradient(to bottom, black 0%, transparent 10%);
-
-      @media (min-width: 960px) {
-        background: radial-gradient(circle, transparent 30%, rgba(#000, .95) 80%), linear-gradient(to bottom, black 0%, transparent 15%);
-        ;
-      }
-    }
-
-    .mountains {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 25vh;
-      filter: blur(0.75px);
-
-      @media (min-width: 960px) {
-        height: auto;
-        width: 100%;
-      }
-    }
-
-    >img {
-      width: auto;
-      height: 100%;
-      left: -55%;
-      position: relative;
-      z-index: -1;
-      animation: spaceRotate 350s infinite linear;
-      transform-origin: center;
-      mix-blend-mode: overlay;
-      opacity: .8;
-
-      @media (min-width: 960px) {
-        width: 100%;
-        object-fit: cover;
-        left: auto;
-      }
-    }
   }
 
   h1 {
