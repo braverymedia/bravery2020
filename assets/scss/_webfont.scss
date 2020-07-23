@@ -1,54 +1,5 @@
-/*
-  This CSS resource incorporates links to font software which is the valuable copyrighted
-  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
-  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
-  Imaging with any questions regarding Web Fonts: http://www.fonts.com
-*/
-@font-face{
-  font-family:"Ariata";
-  src:url("../webfonts/fdc4b153-acf6-433d-b98c-cbd9a1f9b6f7.woff2") format("woff2"),url("../webfonts/dda7d6b6-3bf5-4ef3-b34b-2e7c99952014.woff") format("woff"),url("../webfonts/40307a30-778d-4084-b751-14a286a1e622.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face{
-  font-family:"Ariata W01";
-  src:url("../webfonts/d85ed8d6-562d-4e75-9499-6112e058532c.woff2") format("woff2"),url("../webfonts/ff2d9e8b-fdb1-4adf-9272-1ae0dbd4dab2.woff") format("woff"),url("../webfonts/cfdf0728-c509-419a-bc98-c13d9d8e016f.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face{
-  font-family:"Ariata";
-  src:url("../webfonts/932c96df-cb93-483f-a1c0-944925dfe6f7.woff2") format("woff2"),url("../webfonts/10fb6ab0-1de0-421d-8829-27e14abbb4a7.woff") format("woff"),url("../webfonts/7d46bc6f-50d2-4ca9-8e8f-4a661fd43964.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-// @font-face{
-//   font-family:"Ariata";
-//   src:url("../webfonts/5b34ff21-4291-4628-9272-c39d7f7a0399.woff2") format("woff2"),url("../webfonts/999621bb-4d35-4e4b-aea1-bedff4294162.woff") format("woff"),url("../webfonts/5a3530cf-5ef1-4976-93df-191032694328.ttf") format("truetype");
-//   font-weight: 900;
-//   font-style: normal;
-// }
-@font-face{
-  font-family:"Avenir Next";
-  src:url("../webfonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2") format("woff2"),url("../webfonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),url("../webfonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face{
-  font-family:"Avenir Next";
-  src:url("../webfonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2") format("woff2"),url("../webfonts/f26faddb-86cc-4477-a253-1e1287684336.woff") format("woff"),url("../webfonts/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face{
-  font-family:"Avenir Next";
-  src:url("../webfonts/3f380a53-50ea-4a62-95c5-d5d8dba03ab8.woff2") format("woff2"),url("../webfonts/8344e877-560d-44d4-82eb-9822766676f9.woff") format("woff"),url("../webfonts/b28b01d9-78c5-46c6-a30d-9a62c8f407c5.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face{
-  font-family:"Avenir Next";
-  src:url("../webfonts/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2") format("woff2"),url("../webfonts/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff") format("woff"),url("../webfonts/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+@font-face {
+  font-family: "Name Sans";
+  src: url("../webfonts/name_sans-variable.woff2") format("woff2-variations");
+  font-display: swap;
 }

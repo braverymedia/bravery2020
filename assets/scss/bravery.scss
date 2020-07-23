@@ -5,7 +5,7 @@
   --color-bright: #6b4de0;
   --color-rich: #af9761;
   --font-heading: "Ariata", Georgia, serif;
-  --font-body: "Avenir Next", sans-serif;
+  --font-body: "Name Sans", sans-serif;
   --grid-unit: 8px;
 }
 
@@ -45,7 +45,10 @@ html {
 body {
   background: var(--color-black);
   font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-weight: 300;
   width: 100vw;
+  font-variation-settings: 'opsz'12;
 }
 
 h1,
@@ -53,15 +56,21 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: normal;
   line-height: 1.2;
+  font-variation-settings: 'opsz'24;
 }
 
 h1 {
   font-size: 2em;
   letter-spacing: -.0145;
   font-weight: $weight-medium;
+  font-variation-settings: 'wght'875, 'opsz'96;
+
+  span {
+    color: var(--color-bright);
+  }
 
   @media (min-width: 960px) {
     font-size: 2.7em;
@@ -78,6 +87,7 @@ h2 {
 
   >span {
     color: var(--color-bright);
+    font-weight: 600;
   }
 
   @media (min-width: 960px) {
@@ -190,6 +200,9 @@ button,
   transition: opacity 300ms ease;
   opacity: 1;
   cursor: pointer;
+  letter-spacing: .063em;
+  font-variation-settings: 'wght'800, 'opsz'96;
+  text-transform: uppercase;
 
   &.primary,
   &.bright {
@@ -367,6 +380,13 @@ a.button {
 
 main {
   margin-top: 100vh;
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+
+  >* {
+    transform: translate3d(0, 0, 0); // fix a flicker?
+  }
 
   .layout-services &,
   .layout-contact & {
@@ -837,12 +857,14 @@ blockquote {
   margin: 0;
 
   >p {
+    font-family: var(--font-body);
     font-family: var(--font-heading);
     font-size: 1.333em;
     letter-spacing: -.0051em;
     margin-top: 0;
     line-height: 1.4;
     margin-bottom: calc(var(--grid-unit) * 4);
+    font-variation-settings: 'wght'800, 'opsz'24;
 
     @media (min-width: 960px) {
       font-size: 1.667em;
@@ -865,12 +887,14 @@ blockquote {
 
   footer {
     font-weight: $weight-medium;
+    transform: translate3d(0, 0, 0);
 
     p {
       text-transform: uppercase;
       font-size: .667em;
       letter-spacing: .1em;
       margin-bottom: calc(var(--grid-unit) * 8);
+      font-variation-settings: 'opsz'24;
     }
 
     @media (min-width: 960px) {
@@ -947,6 +971,7 @@ form {
     position: relative;
     font-family: var(--font-body);
     letter-spacing: 0.08em;
+    font-variation-settings: 'opsz'24;
 
     span {
       display: block;
@@ -971,6 +996,9 @@ form {
     display: block;
     margin: 0 auto;
     width: 100%;
+    text-transform: uppercase;
+    font-variation-settings: 'wght'500,
+      'opsz'96;
   }
 }
 
