@@ -34,6 +34,33 @@ if (closeContact) {
   })
 }
 
+// panel color triggers
+// const panels = document.querySelectorAll('.panel');
+// const panelConfig = {
+//   rootMargin: '20px',
+//   threshold: 1
+// };
+
+// let panelObserver = new IntersectionObserver(function (entries, self) {
+//   entries.forEach( entry => {
+//     if ( entry.isIntersecting ) {
+//       if (entry.target.classList.contains('services') || entry.target.classList.contains('testimonial') ) {
+//         navColorChange("ffffff");
+//       }
+//       else {
+//         navColorChange("000000");
+//       }
+//     }
+//   })
+// });
+
+// panels.forEach( panel => { panelObserver.observe(panel); });
+
+// function navColorChange(color) {
+//   document.documentElement.style.setProperty('--color-nav', "#" + color);
+// }
+
+
 // Lazy loading images
 const images = document.querySelectorAll('[data-src]');
 const config = {
@@ -57,3 +84,15 @@ function preloadImage(img) {
   img.src = src;
   img.classList.add('lazy-loaded');
 }
+
+// Mobile nav
+const triggerMenu = document.querySelector('.menu-trigger');
+
+triggerMenu.addEventListener('click', e => {
+  if ( document.body.classList.contains('menu-open') ) {
+    document.body.classList.remove('menu-open');
+  }
+  else {
+    document.body.classList.add('menu-open');
+  }
+});

@@ -1,0 +1,41 @@
+nav {
+    font-variation-settings: 'opsz'24, 'wght'800;
+}
+
+#icon-menu {
+    path {
+        transition: transform .3s ease-in-out;
+    }
+
+    .icon-menu--bottom {
+        transform: translateX(43%);
+    }
+
+    .icon-menu--top {
+        transform: translateX(-43%);
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+    --color-nav: #ffffff;
+
+    .toolbar {
+        mix-blend-mode: normal;
+
+        .site-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #icon-menu {
+        .icon-menu--bottom {
+            transform: translateX(0);
+        }
+
+        .icon-menu--top {
+            transform: translateX(0);
+        }
+    }
+}
