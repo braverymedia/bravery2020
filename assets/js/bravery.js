@@ -29,37 +29,10 @@ if (closeContact) {
     if ( referrer.match(/^https?:\/\/([^\/]+\.)?bravery\.co(\/|$)/i) ) {
       window.location.replace(referrer)
     } else {
-      window.location.replace('https://bravery.co')
+      window.location.replace('https://bravery.co?utm_source=contact_close')
     }
   })
 }
-
-// panel color triggers
-// const panels = document.querySelectorAll('.panel');
-// const panelConfig = {
-//   rootMargin: '20px',
-//   threshold: 1
-// };
-
-// let panelObserver = new IntersectionObserver(function (entries, self) {
-//   entries.forEach( entry => {
-//     if ( entry.isIntersecting ) {
-//       if (entry.target.classList.contains('services') || entry.target.classList.contains('testimonial') ) {
-//         navColorChange("ffffff");
-//       }
-//       else {
-//         navColorChange("000000");
-//       }
-//     }
-//   })
-// });
-
-// panels.forEach( panel => { panelObserver.observe(panel); });
-
-// function navColorChange(color) {
-//   document.documentElement.style.setProperty('--color-nav', "#" + color);
-// }
-
 
 // Lazy loading images
 const images = document.querySelectorAll('[data-src]');
