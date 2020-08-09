@@ -100,6 +100,7 @@ h1 {
 h2 {
   font-size: 1.778em;
   letter-spacing: -0.0068em;
+  font-variation-settings: 'wght'200;
 
   >span {
     color: var(--color-bright);
@@ -137,6 +138,10 @@ figure {
   >img {
     max-width: 100%;
   }
+}
+
+strong {
+  font-weight: 500;
 }
 
 .toolbar {
@@ -235,9 +240,27 @@ figure {
   .nav-link {
     transition: opacity 300ms ease-in-out;
     opacity: 1;
+    position: relative;
 
     &.current-page {
-      font-style: italic;
+      &:after {
+        content: "";
+        width: 10%;
+        background: var(--color-bright);
+        position: absolute;
+        bottom: 1.25em;
+        left: .75em;
+        height: 4px;
+        transition: width .3s ease-in-out;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        &:after {
+          width: calc(100% - 1.5em);
+        }
+      }
     }
 
     &:first-child {
@@ -623,30 +646,6 @@ main {
           }
         }
       }
-
-      &:first-child {
-        header {
-          &:before {
-            content: url('../img/01.svg');
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        header {
-          &:before {
-            content: url('../img/02.svg');
-          }
-        }
-      }
-
-      &:nth-child(3) {
-        header {
-          &:before {
-            content: url('../img/03.svg');
-          }
-        }
-      }
     }
 
     @media (min-width: 960px) {
@@ -658,42 +657,51 @@ main {
         grid-template-columns: 1fr 1fr;
         min-height: 100vh;
 
-        &#foundations {
-          &:after {
-            content: "";
+        .sticky-quote {
+          height: 100vh;
+          grid-column: 2;
+          position: sticky;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          blockquote {
+            padding: 0 calc(var(--grid-unit) * 8);
+
+            >p {
+              font-size: 1.3em;
+            }
+
+            footer {
+              margin-bottom: -25%;
+            }
+          }
+        }
+
+        &#strategy {
+          .sticky-quote {
             background-color: var(--color-white);
             background-image: url('../img/blocks.svg');
             background-size: 106px 100px;
-            height: 100vh;
-            grid-column: 2;
-            position: sticky;
-            top: 0;
           }
         }
 
-        &#essentials {
-          &:after {
-            content: "";
+        &#design {
+          .sticky-quote {
             background-color: #643ad4;
             background-image: url('../img/windmill.svg');
             background-size: 160px 160px;
-            height: 100vh;
-            grid-column: 2;
-            position: sticky;
-            top: 0;
+            color: var(--color-white);
           }
         }
 
-        &#allin {
-          &:after {
-            content: "";
+        &#optimization {
+          .sticky-quote {
             background-image: url('../img/bullseye.svg');
             background-size: cover;
             background-position: center;
-            height: 100vh;
-            grid-column: 2;
-            position: sticky;
-            top: 0;
+            color: var(--color-white);
           }
         }
 
@@ -726,8 +734,11 @@ main {
         }
 
         >article {
-          grid-column: 1 / 7;
+          grid-column: 1 / end;
           font-size: .75em;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: calc(var(--grid-unit) * 8);
         }
 
         h3 {
