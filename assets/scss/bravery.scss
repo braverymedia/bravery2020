@@ -137,6 +137,12 @@ figure {
 
   >img {
     max-width: 100%;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+
+    &.lazy-loaded {
+      opacity: 1;
+    }
   }
 }
 
